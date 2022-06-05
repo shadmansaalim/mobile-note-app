@@ -1,10 +1,10 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { SafeAreaView, View, Text } from 'react-native'
 
 export default function Signup() {
     return (
-        <View>
-            <Text></Text>
-        </View>
+        <SafeAreaView>
+            <Text>Signup</Text>
+        </SafeAreaView>
     )
 }

@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 export default function Edit() {
     return (
         <View>
-            <Text></Text>
+            <Text>Edit</Text>
         </View>
     )
 }
