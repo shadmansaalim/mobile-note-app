@@ -1,7 +1,10 @@
 import React from 'react'
 import { StyleSheet, SafeAreaView, View, Text, Image, TextInput, Pressable } from 'react-native'
 import Button from '../components/Button';
-export default function Signin() {
+import Input from '../components/Input';
+
+
+export default function Signin({ navigation }) {
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <Image
@@ -13,8 +16,8 @@ export default function Signin() {
             >Never forget your notes</Text>
 
             <View style={{ paddingHorizontal: 16, paddingVertical: 25 }}>
-                <TextInput placeholder="Email" style={styles.input} />
-                <TextInput placeholder="Password" secureTextEntry style={styles.input} />
+                <Input placeholder="Email Address" />
+                <Input placeholder="Password" secureTextEntry />
             </View>
 
             <View
@@ -27,7 +30,9 @@ export default function Signin() {
             >
                 <Button title={"Login"} customStyles={{ alignSelf: 'center', marginBottom: 60 }} />
 
-                <Pressable style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <Pressable
+                    onPress={() => navigation.navigate('Signup')}
+                    style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Text>Don't have an account?</Text>
                     <Text style={{ color: 'green', fontWeight: 'bold', marginLeft: 6 }}>Sign Up</Text>
                 </Pressable>
